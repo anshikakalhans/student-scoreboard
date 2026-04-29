@@ -1,0 +1,337 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background: #020b12;
+  color: white;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 30px;
+  background:
+    linear-gradient(rgba(0, 255, 255, .04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, .04) 1px, transparent 1px);
+  background-size: 55px 55px;
+}
+
+.container {
+  width: 82%;
+  margin: auto;
+}
+
+/* ── HEADER ── */
+
+.header-wrap {
+  padding: 30px 0;
+  margin-bottom: 20px;
+}
+
+.sub-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #00ffcc;
+  font-size: 12px;
+  letter-spacing: 4px;
+  margin-bottom: 8px;
+}
+
+.sub-title::before {
+  content: '';
+  display: inline-block;
+  width: 30px;
+  height: 2px;
+  background: #00ffcc;
+}
+
+.header {
+  font-size: 72px;
+  font-weight: 900;
+  color: #cde6f7;
+  line-height: 1;
+  margin-bottom: 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.header span {
+  color: #00ffee;
+  text-shadow:
+    0 0 20px #00ffee,
+    0 0 40px #00ffee,
+    0 0 80px #00cccc;
+}
+
+.header-wrap::after {
+  content: '';
+  display: block;
+  width: 300px;
+  height: 1px;
+  background: linear-gradient(90deg, #00ffcc, transparent);
+}
+
+/* ── REGISTER STUDENT FORM ── */
+
+.add-form-wrapper {
+  border: 1px solid #1b4255;
+  background: #06131d;
+  margin-bottom: 35px;
+}
+
+.add-form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  border-bottom: 1px solid #1b4255;
+}
+
+.dot-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #00ffcc;
+  font-size: 13px;
+  letter-spacing: 3px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.dot {
+  width: 9px;
+  height: 9px;
+  background: #00ff88;
+  border-radius: 50%;
+}
+
+.new-entry {
+  color: #4d88a8;
+  font-size: 12px;
+  letter-spacing: 3px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.add-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 160px;
+}
+
+.add-form input,
+.add-form button {
+  background: #06131d;
+  border: none;
+  border-right: 1px solid #1b4255;
+  color: #4d88a8;
+  padding: 18px;
+  outline: none;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+}
+
+.add-form input::placeholder {
+  color: #4d88a8;
+}
+
+.add-form input[type="number"]::-webkit-inner-spin-button,
+.add-form input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.add-form button {
+  border-right: none;
+  color: #00ffcc;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 1px;
+  font-family: 'Courier New', Courier, monospace;
+  transition: background 0.2s, color 0.2s;
+}
+
+.add-form button:hover {
+  background: #00ffcc;
+  color: #020b12;
+}
+
+/* ── STATS CARDS ── */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-bottom: 35px;
+}
+
+.card {
+  border: 1px solid #1b4255;
+  border-right: none;
+  padding: 25px;
+  background: #06131d;
+  transition: background 0.2s;
+  cursor: default;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.card:last-child {
+  border-right: 1px solid #1b4255;
+}
+
+.card:hover {
+  background: #0a1e2d;
+}
+
+.card p {
+  color: #4d88a8;
+  font-size: 13px;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+.card h2 {
+  color: #00ffcc;
+  font-size: 42px;
+  margin: 0;
+}
+
+/* ── SCOREBOARD ── */
+
+.records {
+  background: #06131d;
+  border: 1px solid #1b4255;
+}
+
+.record-head {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  color: #4d88a8;
+  font-size: 13px;
+  letter-spacing: 3px;
+}
+
+.entries {
+  color: #00ffcc;
+}
+
+.scoreboard {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.scoreboard th,
+.scoreboard td {
+  padding: 20px;
+  text-align: left;
+}
+
+.scoreboard tr {
+  border-top: 1px solid #1b4255;
+}
+
+.scoreboard th {
+  color: #4d88a8;
+  font-weight: normal;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+/* ── STUDENT ROWS ── */
+
+.student-row {
+  transition: background 0.2s;
+}
+
+.student-row:hover {
+  background: #0a1e2d;
+}
+
+.row-pass {
+  border-left: 3px solid #00ff88;
+}
+
+.row-fail {
+  border-left: 3px solid #ff4d7a;
+}
+
+.yellow {
+  color: #ffc857;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.pass {
+  color: #00ff99;
+  border: 1px solid #006644;
+  padding: 8px 12px;
+}
+
+.fail {
+  color: #ff4d7a;
+  border: 1px solid #993355;
+  padding: 8px 12px;
+}
+
+/* ── SAVE INPUT ── */
+
+.scoreboard input {
+  background: #06131d;
+  border: 1px solid #1b4255;
+  color: #8bc6e8;
+  padding: 8px;
+  width: 80px;
+  font-family: 'Courier New', Courier, monospace;
+  outline: none;
+  margin-right: 10px;
+  transition: border 0.2s, color 0.2s;
+}
+
+.scoreboard input::-webkit-inner-spin-button,
+.scoreboard input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.scoreboard input:hover,
+.scoreboard input:focus {
+  border-color: #00ffcc;
+  color: #00ffcc;
+}
+
+.save-btn {
+  background: #06131d;
+  border: 1px solid #1b4255;
+  color: #4d88a8;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-family: 'Courier New', Courier, monospace;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+}
+
+.save-btn:hover {
+  border-color: #00ffcc;
+  color: #00ffcc;
+}
+
+/* ── FOOTER ── */
+
+.footer {
+  text-align: center;
+  color: #1b4255;
+  font-size: 12px;
+  letter-spacing: 4px;
+  padding: 40px 0 20px 0;
+}
+
+.blink {
+  color: #00ff88;
+  animation: blink 1.2s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
